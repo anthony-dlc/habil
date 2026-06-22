@@ -1,0 +1,289 @@
+:root {
+  --btn-cta-links: #185fa5;
+  --navbar-footer: #0d1b2a;
+  --icons-badges-hover: #378add;
+  --cards-tags: #e6f1fb;
+  --bg: #f5f4f0;
+  --main-text: #2c2c2a;
+  --second-text: #888780;
+  --second-font: "Roboto", "Inter", Sans-serif;
+  --main-font: "Inter", "Roboto", Sans-serif;
+  --btn-shadow: 0px 8px 12px -8px #00000080;
+}
+
+body {
+  background-color: var(--bg);
+  display: grid;
+  grid-template-rows: 60px 6fr;
+  font-family: var(--second-font);
+}
+
+/* HEADER CONTENT */
+
+header {
+  background-color: var(--navbar-footer);
+  display: grid;
+  padding: 0 16px;
+  position: sticky;
+  top: 0;
+  box-shadow: 0px 8px 16px -8px #00000080;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  flex: none;
+}
+
+.logo-container img {
+  width: 90px;
+}
+
+.info-container {
+  flex: 1;
+  display: flex;
+  justify-content: end;
+}
+
+.info-container a {
+  padding: 6px 18px;
+  border-radius: 8px;
+  color: var(--second-text);
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+
+.info-container a:hover,
+.info-container a:active,
+.info-container a:focus {
+  background-color: var(--icons-badges-hover);
+  color: var(--bg);
+}
+
+/* MAIN CONTENT */
+
+main {
+  padding: 32px 16px;
+}
+
+h1 {
+  color: var(--main-text);
+  font-family: var(--main-font);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  text-wrap: balance;
+}
+
+.subtitulo {
+  color: var(--second-text);
+  font-family: var(--second-font);
+  text-align: center;
+  padding: 8px;
+  font-weight: bold;
+}
+
+.tectinicos-container {
+  height: 200px;
+}
+
+/* SECCION PARA FORMULARIO DE TECNICOS */
+
+.quiero-trabajar {
+  text-align: center;
+  padding: 32px;
+}
+
+.quiero-trabajar h2 {
+  color: var(--main-text);
+  font-family: var(--main-font);
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 8px;
+  text-wrap: balance;
+}
+
+.quiero-trabajar button {
+  background-color: var(--btn-cta-links);
+  color: var(--bg);
+  padding: 4px 16px;
+  margin: auto;
+  margin-top: 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: var(--btn-shadow);
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+
+.quiero-trabajar button:hover,
+.quiero-trabajar button:active,
+.quiero-trabajar button:focus {
+  background-color: var(--icons-badges-hover);
+}
+
+/* FOOTER */
+
+footer {
+  background-color: var(--navbar-footer);
+  padding: 32px 16px;
+  display: grid;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer img {
+  width: 60px;
+}
+
+footer p {
+  font-size: 0.6rem;
+  color: var(--second-text);
+}
+
+/* 768px */
+
+@media (min-width: 760px) {
+  body {
+    grid-template-rows: 80px 6fr;
+  }
+
+  /* HEADER CONTENT*/
+
+  header {
+    padding: 0 32px;
+  }
+
+  .logo-container img {
+    width: 120px;
+  }
+
+  .info-container a {
+    font-size: 1.1rem;
+  }
+
+  /* MAIN CONTENT */
+
+  main {
+    padding: 48px 32px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .subtitulo {
+    font-size: 1.1rem;
+  }
+
+  .tectinicos-container {
+    height: 300px;
+  }
+
+  /* SECCION PARA FORMULARIO DE TECNICOSS */
+
+  .quiero-trabajar {
+    padding: 48px 32px;
+  }
+
+  .quiero-trabajar h2 {
+    font-size: 1.8rem;
+    padding: 12px;
+  }
+
+  .quiero-trabajar button {
+    padding: 6px 18px;
+    font-size: 1.1rem;
+    margin-top: 16px;
+  }
+
+  /* FOOTER */
+
+  footer {
+    padding: 32px;
+  }
+
+  footer img {
+    width: 80px;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
+}
+
+/* 1024px */
+
+@media (min-width: 1024px) {
+  /* HEADER */
+
+  .logo-container img {
+    width: 150px;
+  }
+
+  .info-container a {
+    padding: 7px 21px;
+    font-size: 1.2rem;
+  }
+
+  /* MAIN CONTENT */
+
+  main {
+    padding: 48px 16px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    padding: 8px 0;
+  }
+
+  .subtitulo {
+    font-size: 1.2rem;
+  }
+}
+
+/* 1280px */
+
+@media (min-width: 1280px) {
+  .header-content,
+  .main-content,
+  .footer-content {
+    width: 1200px;
+    margin: auto;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    padding: 16px 0;
+  }
+
+  .subtitulo {
+    font-size: 1.3rem;
+  }
+
+  /* SECCION PARA FORMULARIO DE TECNICOSS */
+
+  .quiero-trabajar {
+    padding: 60px 32px;
+  }
+
+  .quiero-trabajar h2 {
+    font-size: 2rem;
+    padding: 16px;
+  }
+
+  .quiero-trabajar button {
+    padding: 8px 24px;
+    font-size: 1.2rem;
+    margin-top: 16px;
+  }
+}
