@@ -12,6 +12,7 @@ header {
   display: grid;
   padding: 0 16px;
   position: sticky;
+  z-index: 1000;
   top: 0;
   box-shadow: 0px 8px 16px -8px #00000080;
 }
@@ -188,7 +189,7 @@ footer ul li > a {
 }
 
 footer ul li > a:hover {
-  border-radius: 0 0 4px 4px;
+  border-radius: 4px;
   background-color: var(--icons-badges-hover);
   color: var(--bg);
 }

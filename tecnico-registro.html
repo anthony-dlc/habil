@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hábil | Técnico Registro</title>
+    <link rel="canonical" href="https://habil.com.do/ Técnico Registro" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/tecnico-registro.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/icons/habil-favicon.svg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <div class="logo-container">
+          <a href="/index.html"
+            ><img
+              src="./assets/images/habil-logo-light.svg"
+              alt="Logo de habil"
+          /></a>
+        </div>
+        <button type="button" class="svg-container">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>menu</title>
+            <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+          </svg>
+        </button>
+        <ul class="info-container">
+          <li>
+            <a
+              href="https://wa.link/ke6u23"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Contacto</a
+            >
+          </li>
+          <li><a href="#"> Categorías </a></li>
+          <li>
+            <a href="#">¿Cómo funciona?</a>
+          </li>
+          <li>
+            <a href="./tecnico-registro.html">Registrarse como técnico</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <form action="https://formspree.io/f/xvzjgddq" method="post">
+        <img
+          src="./assets/images/habil-logo-light.svg"
+          alt="Habil"
+          title="Habil"
+        />
+        <button type="button" class="cerrar-formulario">
+          <a href="./index.html"
+            ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <title>cerrar</title>
+              <path
+                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+              /></svg
+          ></a>
+        </button>
+        <h2 class="encabezado">Registro de técnico</h2>
+        <fieldset class="d-personales-contenedor">
+          <legend>DATOS PERSONALES</legend>
+          <div class="input-contenedor">
+            <label for="nombre" class="requerido">Nombre <span>*</span></label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Ej: jon"
+              required
+            />
+          </div>
+          <div class="input-contenedor">
+            <label for="apellido" class="requerido"
+              >Apellido <span>*</span></label
+            >
+            <input
+              type="text"
+              id="apellido"
+              name="apellido"
+              placeholder="Ej: rodriguez"
+              required
+            />
+          </div>
+          <div class="input-contenedor">
+            <label for="telefono" class="requerido"
+              >Teléfono <span>*</span></label
+            >
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              placeholder="Ej: 809-000-0000"
+              pattern="^\+?1?\d{10}$"
+              required
+            />
+          </div>
+          <div class="input-contenedor">
+            <label for="whatsapp">Whatsapp</label>
+            <input
+              type="text"
+              id="whatsapp"
+              name="whatsapp"
+              pattern="^\+?1?\d{10}$"
+              placeholder="Ej: 809-000-0000"
+            />
+          </div>
+        </fieldset>
+        <hr />
+        <fieldset>
+          <legend>TU ESPECIALIDAD</legend>
+          <div class="input-contenedor">
+            <label for="especialidad">Categoría principal <span>*</span></label>
+            <input
+              class="requerido"
+              type="text"
+              id="especialidad"
+              name="especialidad"
+              placeholder="Ej: Cuál es tu especialidad?"
+              required
+            />
+          </div>
+          <div class="input-contenedor">
+            <label for="zona-de-servicio"
+              >Zona de servicio <span>*</span></label
+            >
+            <input
+              class="requerido"
+              type="text"
+              id="zona-de-servicio"
+              name="zona-de-servicio"
+              placeholder="Ej: Santiago norte, pueblo nuevo..."
+              required
+            />
+          </div>
+          <div class="input-contenedor">
+            <label for="experiencia">Años de experiencia</label>
+            <select name="experiencia" id="experiencia">
+              <option value="1-3 años">1-3 años</option>
+              <option value="3-5 años">3-5 años</option>
+              <option value="5-10 años">5-10 años</option>
+              <option value="10+ años">10+ años</option>
+            </select>
+          </div>
+        </fieldset>
+        <hr />
+        <fieldset>
+          <legend>PRESENTACION</legend>
+          <label for="servicios">¿Qué servicios ofreces? <span>*</span></label>
+          <textarea
+            class="requerido servicios-ofrecidos"
+            name="servicios"
+            id="servicios"
+            placeholder="Ej: Instalaciones eléctricas, mantenimiento de aires acondicionados..."
+            required
+          ></textarea>
+        </fieldset>
+        <button type="submit" class="quiero-unirme">Quiero unirme</button>
+        <input
+          type="hidden"
+          name="_next"
+          value="https://habil.com.do/gracias.html"
+        />
+      </form>
+    </main>
+
+    <footer>
+      <div class="footer-content" id="footer">
+        <div class="footer-info">
+          <a href="#body" class="logo" title="Habil"
+            ><img src="./assets/images/habil-logo-light.svg" alt="Habil logo"
+          /></a>
+          <p class="descripcion">El servicio que necesitas a tu alcance</p>
+          <a
+            class="instagram"
+            href="http://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <title>Habil Instagram</title>
+              <path
+                d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"
+              /></svg
+          ></a>
+        </div>
+        <div class="footer-info">
+          <h2>Navegación</h2>
+          <ul>
+            <li><a href="./index.html">Inicio</a></li>
+            <!-- <li><a href="#">Cómo funciona</a></li> -->
+            <!-- <li><a href="#">Categorías</a></li> -->
+            <li>
+              <a
+                href="https://wa.link/ke6u23"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-info">
+          <h2>Para técnicos</h2>
+          <ul>
+            <li><a href="./tecnico-registro.html">Registrarse</a></li>
+            <!-- <li><a href="#">Beneficios</a></li> -->
+            <!-- <li><a href="#">Preguntas frecuentes</a></li> -->
+          </ul>
+        </div>
+        <!-- <div class="footer-info">
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="#">Términos y condiciones</a></li>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </div> -->
+        <div class="footer-info">
+          <p class="derechos">© 2026 Hábil. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/hamburguesaNav.js"></script>
+  </body>
+</html>
