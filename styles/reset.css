@@ -2,6 +2,19 @@
   font-size: 100%;
   font-family: system-ui, sans-serif;
   scroll-behavior: smooth;
+  --btn-cta-links: #185fa5;
+  --navbar-footer: #0d1b2a;
+  --icons-badges-hover: #378add;
+  --cards-tags: #e6f1fb;
+  --bg: #f5f4f0;
+  --main-text: #2c2c2a;
+  --second-text: #888780;
+  --second-font: "Roboto", "Inter", Sans-serif;
+  --main-font: "Inter", "Roboto", Sans-serif;
+  --btn-shadow: 0px 8px 12px -8px #00000080;
+  --trancisiones:
+    background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
 }
 *,
 *::before,

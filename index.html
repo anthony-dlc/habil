@@ -7,6 +7,7 @@
       name="description"
       content="Esta es una plataforma dedicada a ayudarte a conectar con el servicio que necesitas, cuando lo necesitas."
     />
+    <link rel="canonical" href="https://habil.com.do/" />
     <title>Hábil</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,7 +16,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/reset.css" />
-    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
     <link
       rel="shortcut icon"
       href="./assets/icons/habil-favicon.svg"
@@ -28,14 +29,29 @@
         <div class="logo-container">
           <img src="./assets/images/habil-logo-light.svg" alt="Logo de habil" />
         </div>
-        <div class="info-container">
-          <a
-            href="https://wa.link/ke6u23"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Contacto</a
-          >
-        </div>
+        <button type="button" class="svg-container">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>menu</title>
+            <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+          </svg>
+        </button>
+        <ul class="info-container">
+          <li>
+            <a
+              href="https://wa.link/ke6u23"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Contacto</a
+            >
+          </li>
+          <li><a href="#"> Categorías </a></li>
+          <li>
+            <a href="#">¿Cómo funciona?</a>
+          </li>
+          <li>
+            <a href="#">Registrarse como técnico</a>
+          </li>
+        </ul>
       </div>
     </header>
     <main>
@@ -57,5 +73,6 @@
         <p>copywrite © habil-2026</p>
       </div>
     </footer>
+    <script src="./js/hamburguesaNav.js"></script>
   </body>
 </html>
