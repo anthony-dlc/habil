@@ -132,23 +132,71 @@ h1 {
 
 footer {
   background-color: var(--navbar-footer);
-  padding: 32px 16px;
+  padding: 48px 16px;
   display: grid;
 }
 
 .footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-rows: 150px;
+  gap: 8px;
 }
 
-footer img {
-  width: 60px;
+footer .logo {
+  width: 200px;
 }
 
-footer p {
-  font-size: 0.6rem;
+.footer-info {
+  font-size: 0.8rem;
+}
+.descripcion {
+  line-height: 1;
   color: var(--second-text);
+}
+
+footer h2,
+.derechos {
+  color: var(--second-text);
+}
+
+footer h2 {
+  font-weight: bold;
+}
+
+footer ul {
+  margin-top: 8px;
+}
+
+footer ul li > a {
+  padding: 8px 2px;
+  color: var(--second-text);
+}
+
+footer ul li > a {
+  transition: var(--trancisiones);
+}
+
+.instagram {
+  width: 20px;
+}
+
+.instagram svg {
+  margin-top: 8px;
+  fill: var(--btn-cta-links);
+  transition: var(--trancisiones);
+}
+
+footer ul li > a:hover {
+  border-radius: 0 0 4px 4px;
+  background-color: var(--icons-badges-hover);
+  color: var(--bg);
+}
+
+.instagram:hover svg {
+  background-color: none;
+  fill: var(--icons-badges-hover);
+  transform: scale(1.1);
 }
 
 /* 768px */
@@ -235,14 +283,6 @@ footer p {
 
   footer {
     padding: 32px;
-  }
-
-  footer img {
-    width: 80px;
-  }
-
-  footer p {
-    font-size: 0.8rem;
   }
 }
 
