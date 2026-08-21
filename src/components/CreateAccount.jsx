@@ -67,24 +67,24 @@ function CreateAccount() {
     }
 
     alert("User created");
-    console.log(data)
+    console.log(data);
   };
 
   return (
     <div className="form-container">
       <img
         className="icon-dark"
-        src="../src/assets/habil-logo-dark.svg"
+        src="../public/icons/habil-logo-dark.svg"
         alt="habil-logo"
       />
       <img
         className="icon-light"
-        src="../src/assets/habil-logo-light.svg"
+        src="../public/icons/habil-logo-light.svg"
         alt="habil-logo"
       />
       <img
         className="form-background"
-        src="../src/assets/large-form-img.jpg"
+        src="../public/images/large-form-img.jpg"
         alt="computadora con herramientas"
       />
       <form onSubmit={handleSubmit}>
