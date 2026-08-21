@@ -67,6 +67,7 @@ function CreateAccount() {
     }
 
     alert("User created");
+    console.log(data)
   };
 
   return (
