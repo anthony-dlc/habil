@@ -74,17 +74,17 @@ function CreateAccount() {
     <div className="form-container">
       <img
         className="icon-dark"
-        src="../public/icons/habil-logo-dark.svg"
+        src="icons/habil-logo-dark.svg"
         alt="habil-logo"
       />
       <img
         className="icon-light"
-        src="../public/icons/habil-logo-light.svg"
+        src="icons/habil-logo-light.svg"
         alt="habil-logo"
       />
       <img
         className="form-background"
-        src="../public/images/large-form-img.jpg"
+        src="images/large-form-img.jpg"
         alt="computadora con herramientas"
       />
       <form onSubmit={handleSubmit}>
