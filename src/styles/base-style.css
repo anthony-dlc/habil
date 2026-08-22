@@ -10,8 +10,21 @@
   --second-text: #888780;
   --second-font: "Roboto", "Inter", Sans-serif;
   --main-font: "Inter", "Roboto", Sans-serif;
-  --btn-shadow: 0px 8px 12px -8px #00000080;
+  --btn-shadow-blanco: 0 4px 14px #185fa540;
+  --btn-shadow-azul: 0 4px 12px #185fa533;
+  --btn-shadow-hover-azul: 0 8px 20px rgba(55, 138, 221, 0.3);
+  --btn-shadow-hover-blanco: 0 8px 22px rgba(55, 138, 221, 0.35);
+  --btn-transform-blanco: translateY(-2px);
+  --btn-transform-azul: translateY(-1px);
+  --input-shadow-bg-blanco: inset 0 2px 4px rgba(139, 134, 122, 0.05);
+  --input-shadow-bg-azul: inset 0 1px 3px rgba(115, 125, 140, 0.05);
+  --input-border-bg-blanco: border: 1px solid #e1ded5;
+  --input-border-bg-azul: border: 1px solid #d2e4f7;
+  --input-shadow-bg-blanco-focus: 0 0 0 4px rgba(24, 95, 165, 0.15);
+  --input-shadow-bg-azul-hover: 0 4px 12px rgba(115, 125, 140, 0.08);
+  color: #000000;
   --trancisiones:
-    background-color 0.3s ease-in-out, color 0.3s ease-in-out,
-    transform 0.3s ease-in-out;
+    background-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  --border-block-azul: 1px solid #ffffff;
+  --shadow-block-azul: 0 10px 30px -5px rgba(139, 134, 122, 0.2);
 }

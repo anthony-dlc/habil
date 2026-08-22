@@ -1,9 +1,9 @@
 import "../styles/reset.css";
-import "../styles/CreateAccount.css";
+import "../styles/SignUp.css";
 import { useState } from "react";
 import { supabase } from "../supabase/supabaseClient";
 
-function CreateAccount() {
+function SignUp() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -81,57 +81,60 @@ function CreateAccount() {
         src="icons/habil-logo-light.svg"
         alt="habil-logo"
       />
-      <img
-        className="form-background"
-        src="images/large-form-img.jpg"
-        alt="computadora con herramientas"
-      />
       <form onSubmit={handleSubmit}>
         <h1>Administra tus clientes y lleva el control</h1>
         <p className="subtitulo">Crea tu cuenta</p>
-        <label htmlFor="name">
-          Nombre
-          <input
-            type="text"
-            name="name"
-            placeholder="Jon Doe"
-            required
-            onChange={(e) => setName(e.target.value)}
-          />
-        </label>
+        <div className="label-container">
+          <label htmlFor="name">
+            Nombre
+            <input
+              type="text"
+              name="name"
+              placeholder="Jon Doe"
+              value={name}
+              required
+              onChange={(e) => setName(e.target.value)}
+            />
+          </label>
 
-        <label htmlFor="email">
-          Correo Electrónico
-          <input
-            type="email"
-            name="email"
-            placeholder="example@gmail.com"
-            required
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </label>
+          <label htmlFor="email">
+            Correo Electrónico
+            <input
+              type="email"
+              name="email"
+              placeholder="example@gmail.com"
+              value={email}
+              required
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </label>
 
-        <label htmlFor="password">
-          Contraseña
-          <input
-            type="password"
-            name="password"
-            required
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <span className="referencia">
-            mínimo 8 caracteres, mayúscula, minúscula y número
-          </span>
-        </label>
-        <label htmlFor="confirmPassword">
-          Confirmar Contraseña
-          <input
-            type="password"
-            name="confirmPassword"
-            required
-            onChange={(e) => setConfirmPassword(e.target.value)}
-          />
-        </label>
+          <label htmlFor="password">
+            Contraseña
+            <input
+              type="password"
+              name="password"
+              value={password}
+              placeholder="Contraseña"
+              required
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <span className="referencia">
+              mínimo 8 caracteres, mayúscula, minúscula y número
+            </span>
+          </label>
+          <label htmlFor="confirmPassword">
+            Confirmar Contraseña
+            <input
+              type="password"
+              name="confirmPassword"
+              value={confirmPassword}
+              placeholder="Confirmar Contraseña"
+              required
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            />
+          </label>
+        </div>
         {errorMessage && <p className="error-message">{errorMessage}</p>}
         <button type="submit">Crear Cuenta</button>
       </form>
@@ -139,4 +142,4 @@ function CreateAccount() {
   );
 }
 
-export default CreateAccount;
+export default SignUp;
