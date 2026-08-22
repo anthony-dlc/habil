@@ -133,7 +133,6 @@ function CreateAccount() {
           />
         </label>
         {errorMessage && <p className="error-message">{errorMessage}</p>}
-        <p className="error-message">Error</p>
         <button type="submit">Crear Cuenta</button>
       </form>
     </div>
