@@ -30,6 +30,7 @@ body {
   background-color: var(--bg);
   position: relative;
   color: var(--second-text);
+  padding-top: 30px;
 }
 
 .icon-dark {
@@ -49,19 +50,30 @@ body {
 
 form {
   background-color: var(--bg);
-  padding: 60px 24px;
+  /* background-color: #008000; */
+  padding: 80px 24px;
   font-family: var(--second-font);
 }
 
-h2 {
+h1 {
   color: var(--main-text);
   font-size: 1.8rem;
   text-align: center;
   font-family: var(--main-font);
   font-weight: bold;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
   word-break: keep-all;
   hyphens: none;
+}
+
+.subtitulo {
+  color: var(--main-text);
+  text-align: center;
+  padding: 8px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: var(--second-font);
+  margin-bottom: 16px;
 }
 
 label {
@@ -99,6 +111,7 @@ button {
   color: var(--cards-tags);
   transition: var(--trancisiones);
   font-family: var(--main-font);
+  margin-top: 32px;
 }
 
 button:hover {
@@ -121,6 +134,9 @@ input:user-invalid {
 
 .error-message {
   color: #ff0000;
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 150px;
 }
 
 @media (min-width: 455px) {
@@ -137,12 +153,16 @@ input:user-invalid {
     box-shadow: 0 0 8px 4px #00000015;
   }
 
-  h2 {
+  h1 {
     font-size: 2rem;
   }
 
   input {
     padding: 12px;
+  }
+
+  .error-message {
+    bottom: 210px;
   }
 }
 
@@ -192,7 +212,17 @@ input:user-invalid {
     margin-bottom: 16px;
   }
 
-  h2 {
+  h1 {
     font-size: 2.2rem;
+  }
+
+  .error-message {
+    bottom: 160px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .error-message {
+    bottom: 260px;
   }
 }

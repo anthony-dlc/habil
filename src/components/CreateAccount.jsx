@@ -67,7 +67,6 @@ function CreateAccount() {
     }
 
     alert("User created");
-    console.log(data);
   };
 
   return (
@@ -88,7 +87,8 @@ function CreateAccount() {
         alt="computadora con herramientas"
       />
       <form onSubmit={handleSubmit}>
-        <h2>Administra tus clientes y lleva el control</h2>
+        <h1>Administra tus clientes y lleva el control</h1>
+        <p className="subtitulo">Crea tu cuenta</p>
         <label htmlFor="name">
           Nombre
           <input
@@ -101,7 +101,7 @@ function CreateAccount() {
         </label>
 
         <label htmlFor="email">
-          Correo Electronico
+          Correo Electrónico
           <input
             type="email"
             name="email"
@@ -133,6 +133,7 @@ function CreateAccount() {
           />
         </label>
         {errorMessage && <p className="error-message">{errorMessage}</p>}
+        <p className="error-message">Error</p>
         <button type="submit">Crear Cuenta</button>
       </form>
     </div>
