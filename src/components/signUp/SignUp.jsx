@@ -1,14 +1,14 @@
-import "../styles/reset.css";
-import "../styles/SignUp.css";
+import "../../assets/reset.css";
+import "./SignUp.css";
 import { useState } from "react";
-import { supabase } from "../supabase/supabaseClient";
+import { supabase } from "../../supabase/supabaseClient";
 
 function SignUp() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMsg, setErrorMsg] = useState("");
 
   const validarEmail = (email) => {
     const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -32,22 +32,22 @@ function SignUp() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setErrorMessage("");
+    setErrorMsg("");
 
     if (!validarEmail(email)) {
-      setErrorMessage("Correo no valido");
+      setErrorMsg("Correo no valido");
       return;
     }
 
     if (!validarPassword(password)) {
-      setErrorMessage(
+      setErrorMsg(
         "La contraseña debe tener mínimo 8 caracteres, mayúscula, minúscula y número",
       );
       return;
     }
 
     if (!validarConfirmPassword(confirmPassword)) {
-      setErrorMessage("La contraseña no coinciden, intentalo de nuevo");
+      setErrorMsg("La contraseña no coinciden, intentalo de nuevo");
       return;
     }
 
@@ -62,32 +62,31 @@ function SignUp() {
     });
 
     if (error) {
-      setErrorMessage(error.message);
+      setErrorMsg(error.message);
       return;
     }
 
     alert("User created");
+    console.log(data);
   };
 
   return (
-    <div className="form-container">
+    <div className="signUp-formContainer">
       <img
-        className="icon-dark"
+        className="signUp-iconDark"
         src="icons/habil-logo-dark.svg"
         alt="habil-logo"
       />
-      <img
-        className="icon-light"
-        src="icons/habil-logo-light.svg"
-        alt="habil-logo"
-      />
-      <form onSubmit={handleSubmit}>
-        <h1>Administra tus clientes y lleva el control</h1>
-        <p className="subtitulo">Crea tu cuenta</p>
-        <div className="label-container">
-          <label htmlFor="name">
+      <form className="signUp-form" onSubmit={handleSubmit}>
+        <h1 className="signUp-h1">
+          Administra tus clientes y lleva el control
+        </h1>
+        <p className="signUp-subtitulo">Crea tu cuenta</p>
+        <div className="signUp-labelContainer">
+          <label className="signUp-label" htmlFor="name">
             Nombre
             <input
+              className="signUp-input"
               type="text"
               name="name"
               placeholder="Jon Doe"
@@ -97,9 +96,10 @@ function SignUp() {
             />
           </label>
 
-          <label htmlFor="email">
+          <label className="signUp-label" htmlFor="email">
             Correo Electrónico
             <input
+              className="signUp-input"
               type="email"
               name="email"
               placeholder="example@gmail.com"
@@ -109,9 +109,10 @@ function SignUp() {
             />
           </label>
 
-          <label htmlFor="password">
+          <label className="signUp-label" htmlFor="password">
             Contraseña
             <input
+              className="signUp-input"
               type="password"
               name="password"
               value={password}
@@ -119,13 +120,14 @@ function SignUp() {
               required
               onChange={(e) => setPassword(e.target.value)}
             />
-            <span className="referencia">
+            <span className="signUp-referencia">
               mínimo 8 caracteres, mayúscula, minúscula y número
             </span>
           </label>
-          <label htmlFor="confirmPassword">
+          <label className="signUp-label" htmlFor="confirmPassword">
             Confirmar Contraseña
             <input
+              className="signUp-input"
               type="password"
               name="confirmPassword"
               value={confirmPassword}
@@ -135,8 +137,10 @@ function SignUp() {
             />
           </label>
         </div>
-        {errorMessage && <p className="error-message">{errorMessage}</p>}
-        <button type="submit">Crear Cuenta</button>
+        {errorMsg && <p className="signUp-ErrorMsg">{errorMsg}</p>}{" "}
+        <button type="submit" className="signUp-btn">
+          Crear Cuenta
+        </button>
       </form>
     </div>
   );

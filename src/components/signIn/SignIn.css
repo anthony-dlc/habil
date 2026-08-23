@@ -29,200 +29,122 @@
   --shadow-block-azul: 0 10px 30px -5px rgba(139, 134, 122, 0.2);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: var(--bg);
-}
-
-.form-container {
+.signIn-formContainer {
   background-color: var(--bg);
   position: relative;
-  color: var(--second-text);
-  padding-top: 30px;
+  padding: 60px 16px;
   height: 100vh;
+  font-family: var(--second-font);
+  color: var(--second-text);
 }
 
-.icon-dark {
-  z-index: 100;
+.signIn-iconDark {
   position: absolute;
-  top: 16px;
-  left: 16px;
-  width: 80px;
+  width: 120px;
+  top: 12px;
+  left: 12px;
 }
 
-.icon-light {
-  display: none;
-}
-
-.form-container .form-background {
-  display: none;
-}
-
-form {
+.signIn-form {
+  padding: 48px 16px;
   position: relative;
-  /* background-color: var(--bg); */
-  padding: 40px 12px;
-  font-family: var(--second-font);
+  max-width: 400px;
+  margin: auto;
+  border-radius: 16px;
 }
 
-h1 {
+.signIn-h1 {
   color: var(--main-text);
-  font-size: 1.8rem;
-  text-align: center;
   font-family: var(--main-font);
+  font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 16px;
-  word-break: keep-all;
-  hyphens: none;
-}
-
-.subtitulo {
-  color: var(--main-text);
   text-align: center;
-  padding: 8px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  font-family: var(--second-font);
-  margin-bottom: 16px;
+  padding: 8px 0;
+  margin-bottom: 12px;
 }
 
-label {
+.signIn-label {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  gap: 4px;
-  margin-bottom: 12px;
-  position: relative;
+  padding: 6px 0;
 }
 
-input {
+.signIn-input,
+.signIn-btnSummit {
+  margin-top: 4px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+}
+
+.signIn-input {
   outline: none;
   background-color: #ffffff;
-  border-radius: 8px;
   border: var(--input-border-bg-blanco);
   box-shadow: var(--input-shadow-bg-blanco);
-  color: #000000;
-  padding: 8px;
 }
 
-input::placeholder {
-  color: #000000;
-  opacity: 0.6;
-}
-
-input:focus {
+.signIn-input:focus {
   border-bottom-color: var(--bg);
 }
 
-button {
+.signIn-btnSummit {
   width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
-  box-shadow: var(--btn-shadow);
   background-color: var(--btn-cta-links);
   color: var(--cards-tags);
   transition: var(--trancisiones);
   transform: var(--btn-transform-blanco);
-  font-family: var(--main-font);
   margin-top: 16px;
 }
 
-button:hover {
+.signIn-btnSummit:hover {
   background-color: var(--icons-badges-hover);
   transform: var(--btn-transform-blanco);
   box-shadow: var(--btn-shadow-hover-blanco);
 }
 
-.referencia {
-  font-size: 0.7rem;
-  position: absolute;
-  bottom: -4px;
-}
-
-input:user-valid {
-  outline: 1px solid #008000;
-}
-
-input:user-invalid {
-  outline: 1px solid #ff0000;
-}
-
-.error-message {
+.signIn-ErrorMsg {
   color: #ff0000;
   font-size: 0.8rem;
   position: absolute;
-  bottom: 20px;
-  text-align: center;
+  bottom: 30px;
 }
 
-@media (min-width: 455px) {
-  .form-container {
-    padding: 64px 0;
-  }
-
-  .icon-dark {
-    width: 120px;
-  }
-
-  form {
-    border-radius: 16px;
-    background-color: var(--cards-tags);
-    max-width: 520px;
-    margin: auto;
-    padding: 60px 24px;
-    border: var(--border-block-azul);
-    box-shadow: var(--shadow-block-azul);
-  }
-
-  .label-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  label {
-    padding: 0;
-  }
-
-  input {
+@media (min-width: 450px) {
+  .signIn-input {
     background-color: #dbeaf8;
     border: 1px solid transparent;
     box-shadow: none;
   }
 
-  input:hover {
+  .signIn-input:hover {
     background-color: #ffffff;
     border-color: #a4cbf3;
-    box-shadow: var(--input-shadow-bg-azul-hover);
+    box-shadow: 0 4px 12px rgba(115, 125, 140, 0.08);
   }
-
-  .referencia {
-    bottom: -24px;
-  }
-
-  button {
-    margin-top: 32px;
+  .signIn-btnSummit {
     box-shadow: var(--btn-shadow-azul);
     transform: var(--btn-transform-azul);
   }
 
-  button:hover {
+  .signIn-btnSummit:hover {
     box-shadow: var(--btn-shadow-hover-azul);
   }
 
-  .error-message {
+  .signIn-h1 {
+    padding: 0;
+    padding-bottom: 16px;
+  }
+  .signIn-form {
+    background-color: var(--cards-tags);
+    padding: 60px 32px;
+    border: var(--border-block-azul);
+    box-shadow: var(--shadow-block-azul);
+  }
+  .signIn-ErrorMsg {
     bottom: 40px;
   }
 }

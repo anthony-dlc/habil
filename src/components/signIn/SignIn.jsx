@@ -1,18 +1,19 @@
-import "../styles/SignIn.css";
+import "../../assets/reset.css";
+import "./SignIn.css";
 import { useState } from "react";
-import { supabase } from "../supabase/supabaseClient";
+import { supabase } from "../../supabase/supabaseClient";
 
 function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMsg, setErrorMsg] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setErrorMessage("");
+    setErrorMsg("");
 
     if (!email || !password) {
-      setErrorMessage("Completa ambos campos");
+      setErrorMsg("Completa ambos campos");
       return;
     }
 
@@ -22,25 +23,27 @@ function SignIn() {
     });
 
     if (error) {
-      setErrorMessage("Email o Contraseña  inválida");
+      setErrorMsg("Email o Contraseña  inválida");
       return;
     }
 
     alert("Sesión Iniciada");
+    console.log(data);
   };
 
   return (
-    <div className="form-container">
+    <div className="signIn-formContainer">
       <img
-        className="icon-dark"
+        className="signIn-iconDark"
         src="icons/habil-logo-dark.svg"
         alt="habil logo con letras negras"
       />
-      <form onSubmit={handleSubmit}>
-        <h1>Iniciar Sesión</h1>
-        <label htmlFor="email">
+      <form className="signIn-form" onSubmit={handleSubmit}>
+        <h1 className="signIn-h1">Inicia Sesión</h1>
+        <label htmlFor="email" className="signIn-label">
           Email
           <input
+            className="signIn-input"
             type="email"
             name="email"
             value={email}
@@ -49,9 +52,10 @@ function SignIn() {
             required
           />
         </label>
-        <label htmlFor="password">
+        <label htmlFor="password" className="signIn-label">
           Contraseña
           <input
+            className="signIn-input"
             type="password"
             name="password"
             value={password}
@@ -60,8 +64,11 @@ function SignIn() {
             required
           />
         </label>
-        {errorMessage && <p>{errorMessage}</p>}
-        <button type="submit">Iniciar Sesión</button>
+        {errorMsg && <p className="signIn-ErrorMsg">{errorMsg}</p>}
+
+        <button type="submit" className="signIn-btnSummit">
+          Iniciar Sesión
+        </button>
       </form>
     </div>
   );
