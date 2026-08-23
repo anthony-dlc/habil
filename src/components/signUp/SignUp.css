@@ -8,7 +8,6 @@
   --bg: #f5f4f0;
   --main-text: #2c2c2a;
   --second-text: #888780;
-  --second-font: "Roboto", "Inter", Sans-serif;
   --main-font: "Inter", "Roboto", Sans-serif;
   --btn-shadow-blanco: 0 4px 14px #185fa540;
   --btn-shadow-azul: 0 4px 12px #185fa533;
@@ -37,6 +36,7 @@
 
 body {
   background-color: var(--bg);
+  font-family: var(--main-font);
 }
 
 .signUp-formContainer {
@@ -58,7 +58,6 @@ body {
   width: 100%;
   position: relative;
   padding: 32px 20px;
-  font-family: var(--second-font);
 }
 
 .signUp-h1 {
@@ -199,7 +198,7 @@ body {
   }
 
   .signUp-referencia {
-    bottom: -28px;
+    bottom: -20px;
   }
 
   .signUp-btn {
