@@ -138,7 +138,6 @@ function SignUp() {
           </label>
         </div>
         {errorMsg && <p className="signUp-ErrorMsg">{errorMsg}</p>}{" "}
-        <p className="signUp-ErrorMsg">Hello</p>
         <button type="submit" className="signUp-btn">
           Crear Cuenta
         </button>
