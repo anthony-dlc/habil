@@ -57,13 +57,13 @@ body {
 .signUp-form {
   width: 100%;
   position: relative;
-  padding: 30px 12px;
+  padding: 32px 20px;
   font-family: var(--second-font);
 }
 
 .signUp-h1 {
   color: var(--main-text);
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-align: center;
   font-family: var(--main-font);
   font-weight: bold;
@@ -76,9 +76,9 @@ body {
   color: var(--main-text);
   text-align: center;
   padding: 8px;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: bold;
-  font-family: var(--second-font);
+  font-family: var(--main-font);
   margin-bottom: 16px;
 }
 
@@ -97,7 +97,7 @@ body {
   border: var(--input-border-bg-blanco);
   box-shadow: var(--input-shadow-bg-blanco);
   color: #000000;
-  padding: 8px;
+  padding: 12px;
 }
 .signUp-input::placeholder {
   color: #000000;
@@ -155,7 +155,7 @@ body {
 
 @media (min-width: 425px) {
   .signUp-formContainer {
-    padding: 64px 0;
+    padding: 64px 24px;
   }
 
   .signUp-iconDark {
@@ -174,7 +174,7 @@ body {
 
   .signUp-labelContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 16px;
   }
 
@@ -213,6 +213,6 @@ body {
   }
 
   .signUp-ErrorMsg {
-    bottom: 40px;
+    bottom: 24px;
   }
 }
